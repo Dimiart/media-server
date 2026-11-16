@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="optTitle"></title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <main>
+      <h1 data-i18n="optTitle"></h1>
+      <form id="form">
+        <label class="field">
+          <span data-i18n="optMinSize"></span>
+          <input type="number" id="minSizeKb" min="0" step="1" />
+          <small class="muted" data-i18n="optMinSizeHint"></small>
+        </label>
+        <label class="field">
+          <span data-i18n="optIgnored"></span>
+          <textarea id="ignoredDomains" rows="5" data-i18n-placeholder="optIgnoredPlaceholder"></textarea>
+          <small class="muted" data-i18n="optIgnoredHint"></small>
+        </label>
+        <label class="field">
+          <span data-i18n="optFolder"></span>
+          <input type="text" id="folder" />
+          <small class="muted" data-i18n="optFolderHint"></small>
+        </label>
+        <label class="field">
+          <span data-i18n="optConcurrency"></span>
+          <input type="number" id="concurrency" min="1" max="10" step="1" />
+          <small class="muted" data-i18n="optConcurrencyHint"></small>
+        </label>
+        <label class="check"><input type="checkbox" id="useTitleAsName" /> <span data-i18n="optUseTitle"></span></label>
+        <label class="check"><input type="checkbox" id="showBadge" /> <span data-i18n="optShowBadge"></span></label>
+        <div class="row">
+          <button type="submit" data-i18n="optSave"></button>
+          <button type="button" id="reset" class="secondary" data-i18n="optReset"></button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </form>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

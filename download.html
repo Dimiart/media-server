@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="dlTitle"></title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <main>
+      <h1 data-i18n="dlTitle"></h1>
+      <p id="source" class="muted break"></p>
+
+      <section id="choose" hidden>
+        <label class="field">
+          <span data-i18n="dlQuality"></span>
+          <select id="variant"></select>
+        </label>
+        <label class="field" id="audio-field" hidden>
+          <span data-i18n="dlAudio"></span>
+          <select id="audio"></select>
+        </label>
+        <label class="field">
+          <span data-i18n="dlFileName"></span>
+          <input type="text" id="name" />
+        </label>
+        <label class="check" id="disk-field">
+          <input type="checkbox" id="to-disk" checked />
+          <span data-i18n="dlToDisk"></span>
+        </label>
+        <p class="hint muted" id="disk-hint" data-i18n="dlToDiskHint"></p>
+        <p id="info" class="muted"></p>
+        <div class="row">
+          <button type="button" id="start" data-i18n="dlStart"></button>
+        </div>
+      </section>
+
+      <section id="progress-box" hidden>
+        <p id="phase"></p>
+        <progress id="progress" max="1" value="0"></progress>
+        <p id="progress-text" class="muted"></p>
+        <div class="row">
+          <button type="button" id="stop" class="secondary" data-i18n="dlStop"></button>
+        </div>
+      </section>
+
+      <p id="message" class="status" role="status"></p>
+      <ul id="saved" class="saved"></ul>
+    </main>
+    <script type="module" src="download.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="extName"></title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="popup">
+    <header class="bar">
+      <h1 data-i18n="extName"></h1>
+      <a id="open-options" href="options.html" target="_blank" class="link" data-i18n="popupSettings"></a>
+    </header>
+
+    <p id="empty" class="muted" hidden data-i18n="popupEmpty"></p>
+
+    <div id="toolbar" class="bar" hidden>
+      <label class="check"><input type="checkbox" id="select-all" /> <span data-i18n="popupSelectAll"></span></label>
+      <span class="spacer"></span>
+      <button type="button" id="download-selected" disabled data-i18n="popupDownloadSelected"></button>
+      <button type="button" id="clear" class="secondary" data-i18n="popupClear"></button>
+    </div>
+
+    <ul id="list" class="items"></ul>
+    <p id="status" class="status" role="status"></p>
+
+    <template id="item-template">
+      <li class="item">
+        <input type="checkbox" class="pick" />
+        <div class="info">
+          <div class="name"></div>
+          <div class="meta muted"></div>
+        </div>
+        <div class="actions">
+          <button type="button" class="download" data-i18n="popupDownload"></button>
+          <button type="button" class="copy secondary" data-i18n="popupCopy"></button>
+        </div>
+      </li>
+    </template>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
